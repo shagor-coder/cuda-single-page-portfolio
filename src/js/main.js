@@ -1,7 +1,4 @@
 
-// $(document).ready(function(){
-//     var mixer = mixitup(".container")
-// });
 $(document).ready(function(){
     $('.button').click(function(){
         var value =$(this).attr("data-filter");
@@ -20,9 +17,5 @@ $(document).ready(function(){
     $(window).scroll(function(){
         $('#header').toggleClass('active', scrollY > 0)
     })
-
-    // $('.navbar-toggler').click(function(){
-    //     $('#header').toggleClass('open');
-    // })
 })
 
