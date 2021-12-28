@@ -10,24 +10,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="src/css/bootstrap.min.css" />
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="dist/style.css" />
     <title>Cuda Single Page Portfolio</title>
   </head>
   <body>
     <!--Header Section-->
-    <header id="header" class="header shadow-sm">
+    <header id="header" class="header shadow-sm fixed-top">
       <!--Nav Bar-->
       <nav class="navbar navbar-expand-md container py-3" id="nav">
         <a class="navbar-brand" href="index.html">
           <h2 class="fs-2 text-white fw-bold">Portfolio</h2>
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler text-white"
           data-bs-toggle="collapse"
           data-bs-target="#collapse"
         >
-          <i class="navbar-toggler-icon"></i>
+          <i class="fa fa-bars"></i>
         </button>
         <div id="collapse" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
@@ -116,7 +123,7 @@
             </div>
           </div>
           <div class="col-sm-6 col-xsm-12 col-md-3">
-            <div class="card bg-transparent">
+            <div class="card bg-transparent mt-3 mt-md-0">
               <div class="card-img-top">
                 <img
                   class="img-fluid m-4"
@@ -134,7 +141,7 @@
             </div>
           </div>
           <div class="col-sm-6 col-xsm-12 col-md-3">
-            <div class="card bg-transparent">
+            <div class="card bg-transparent mt-3 mt-md-0">
               <div class="card-img-top">
                 <img
                   class="img-fluid m-4"
@@ -152,7 +159,7 @@
             </div>
           </div>
           <div class="col-sm-6 col-xsm-12 col-md-3">
-            <div class="card bg-transparent">
+            <div class="card bg-transparent mt-3 mt-md-0">
               <div class="card-img-top">
                 <img
                   class="img-fluid m-4"
@@ -187,9 +194,9 @@
             </p>
           </div>
         </div>
-        <div class="row my-5">
+        <div class="row m-5">
           <div class="col-md-4 text-center">
-            <div class="card bg-transparent">
+            <div class="card bg-transparent mt-3 mt-md-0">
               <div class="card-body">
                 <div class="card-img-top">
                   <img
@@ -225,7 +232,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-transparent">
+            <div class="card bg-transparent mt-3 mt-md-0">
               <div class="card-body">
                 <div class="card-img-top">
                   <img
@@ -261,7 +268,7 @@
             </div>
           </div>
           <div class="col-md-4 text-center">
-            <div class="card bg-transparent">
+            <div class="card bg-transparent mt-3 mt-md-0">
               <div class="card-body">
                 <div class="card-img-top">
                   <img
@@ -446,7 +453,7 @@
           </div>
         </div>
         <div class="row my-4">
-          <div class="col-6 filter apps my-2">
+          <div class="col-12 col-md-6 filter apps my-2">
             <div class="card bg-transparent border-0">
               <div class="card-body">
                 <div class="card-image">
@@ -462,7 +469,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 filter apps web">
+          <div class="col-12 col-md-6 filter apps web">
             <div class="card bg-transparent border-0">
               <div class="card-body">
                 <div class="card-image">
@@ -476,7 +483,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 filter icons">
+          <div class="col-12 col-md-6 filter icons">
             <div class="card bg-transparent border-0">
               <div class="card-body">
                 <div class="card-image">
@@ -490,7 +497,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 filter icons web apps">
+          <div class="col-12 col-md-6 filter icons web apps">
             <div class="card bg-transparent border-0">
               <div class="card-body">
                 <div class="card-image">
@@ -514,97 +521,124 @@
     </section>
     <!--Portfolio-section Ends Here -->
 
-    <!--Testimonial-section-->
-    <section id="testimonial-section" class="py-5">
+    <!-- TESTIMONIAL SECTION -->
+
+    <section class="testimonial py-5" id="testimonial-section">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class="fs-2 fw-bold">What People Say About Us</h2>
-            <p class="lead">Our clients love us!</p>
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="fs-2 fw-bold">Testimonials</h2>
+            <div class="little-border"></div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="description">
-              <div class="image">
-                <img src="./src/img/a1.jpg" alt="" />
+
+        <div class="row text-sm-center swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="row p-3">
+                <div
+                  class="
+                    col-md-4
+                    d-flex
+                    align-items-center
+                    justify-content-center justify-content-md-start
+                  "
+                >
+                  <img
+                    src="./src/img/Group 10.png"
+                    alt=""
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-4 d-grid">
+                  <h4 class="fs-4 fw-bold align-self-center">
+                    Raul K Smith <br />
+                    <small class="fw-normal">Client</small>
+                  </h4>
+                </div>
+                <div class="col-md-4 d-grid">
+                  <span class="mt-md-5">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                </div>
               </div>
-              <div class="message">
-                <p class="lead">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam vero ad expedita modi impedit vel."
+
+              <div class="row p-3">
+                <p class="lead fs-6 text-center text-md-start px-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ipsum, vitae?
                 </p>
-                <h5>Chanel Iman</h5>
-                <h6>CEO Of Pinterest</h6>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="description">
-              <div class="image">
-                <img src="./src/img/a2.jpg" alt="" />
+
+            <div class="swiper-slide">
+              <div class="row p-3">
+                <div
+                  class="
+                    col-md-4
+                    d-flex
+                    align-items-center
+                    justify-content-center justify-content-md-start
+                  "
+                >
+                  <img
+                    src="./src/img/artwork.png"
+                    alt=""
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-4 d-grid">
+                  <h4 class="fs-4 fw-bold align-self-center">
+                    I Jones <br />
+                    <small class="fw-normal">Client</small>
+                  </h4>
+                </div>
+                <div class="col-md-4 d-grid">
+                  <span class="mt-md-5">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                </div>
               </div>
-              <div class="message">
-                <p class="lead">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam vero ad expedita modi impedit vel."
+              <div class="row p-3">
+                <p class="lead fs-6 text-center text-md-start px-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                  unde?
                 </p>
-                <h5>Adriana Lima</h5>
-                <h6>Founder of Instagram</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="description">
-              <div class="image">
-                <img src="./src/img/a3.jpg" alt="" />
-              </div>
-              <div class="message">
-                <p class="lead">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam vero ad expedita modi impedit vel."
-                </p>
-                <h5>Anne Hatahway</h5>
-                <h6>Lead Desinger at Behane</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="description">
-              <div class="image">
-                <img src="./src/img/author.jpg" alt="" />
-              </div>
-              <div class="message">
-                <p class="lead1">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam vero ad expedita modi impedit vel."
-                </p>
-                <h5>Emma Stone</h5>
-                <h6>Co Founder Shazam</h6>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--Testimonial-section Ends Here-->
+
+    <!-- TESTIMONIAL SECTION ENDS -->
 
     <!--Contact-section-->
     <section id="contact-section" class="py-5">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h4>Get in touch</h4>
-            <p class="lead">
+            <h2 class="fs-2 fw-bold text-white">Get in touch</h2>
+            <div class="little-border"></div>
+            <p class="lead text-white">
               1600 Pensylvania Ave NW, Washington DC 20500, United States Of
               America. Tel: (202)456-11111
             </p>
           </div>
         </div>
-        <form class="container" action="#" method="post" netlify>
-          <div class="row">
+        <form action="#" method="post">
+          <div class="row mb-3">
             <div class="col-md-6">
               <input
+                class="form-control"
                 type="text"
                 name="name"
                 placeholder="Your Name*"
@@ -613,6 +647,7 @@
             </div>
             <div class="col-md-6">
               <input
+                class="form-control"
                 type="email"
                 name="name"
                 placeholder="Your Email*"
@@ -621,8 +656,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-12">
               <textarea
+                class="form-control"
                 name="message"
                 id="message"
                 cols="30"
@@ -632,7 +668,9 @@
             </div>
           </div>
           <div class="row">
-            <input class="send" role="button" type="submit" value="Send" />
+            <div class="col-12">
+              <input class="send" role="button" type="submit" value="Send" />
+            </div>
           </div>
         </form>
       </div>
@@ -658,8 +696,10 @@
           </div>
           <div class="row">
             <div class="col">
-              <p class="lead copy">Copyright 2020 &copy; Cuda</p>
-              <p class="lead">
+              <p class="lead copy text-white">
+                Copyright 2020 &copy; Portfolio
+              </p>
+              <p class="lead text-white">
                 All Rights Reseved :
                 <a class="shagor" href="#">Shagor</a>
               </p>
@@ -671,6 +711,8 @@
     <!--Footer-section Ends Here-->
     <script src="vendors/js/jquery-3.6.0.min.js"></script>
     <script src="vendors/js/radial.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/main.js"></script>
   </body>

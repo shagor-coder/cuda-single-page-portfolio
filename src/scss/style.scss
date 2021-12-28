@@ -54,6 +54,12 @@ section {
   padding: 1rem 4rem;
   font-size: 1.125rem;
 }
+.card {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 5px 5px #00000026;
+  }
+}
 .lead {
   font-weight: 400 !important;
   font-size: 1rem !important;
@@ -76,6 +82,10 @@ section {
   #nav {
     .nav-item {
       display: flex;
+      align-items: center;
+    }
+    .nav-link {
+      text-transform: uppercase;
       padding: 0.2rem 0.6rem;
       transition: 0.2s ease-in-out;
       border-radius: 2px;
@@ -90,9 +100,6 @@ section {
       &.current {
         background-color: rebeccapurple;
       }
-    }
-    .nav-link {
-      text-transform: uppercase;
     }
   }
   &.active {
@@ -134,7 +141,7 @@ section {
 }
 // Teams
 #team-section {
-  background-color: #afc3d1;
+  background-color: #f2f8fb;
   text-align: center;
   color: rgb(0, 0, 0) !important;
   .little-border {
@@ -323,64 +330,19 @@ section {
 #testimonial-section {
   background-color: #d74680;
   text-align: center;
-  h4 {
-    font-size: 1.8rem;
-    font-weight: 550;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-  h4::after {
-    content: '';
+
+  .little-border {
     height: 3px;
     width: 100px;
-    display: block;
     margin: auto;
-    background-color: #bb4071;
-    margin-bottom: 0.5rem;
+    background: #d74680;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 15px 0 rgba(128, 128, 128, 0.534);
   }
-  .lead {
-    font-size: 0.6rem;
-  }
-  .col-md-6 {
+  .swiper-slide {
     img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-    }
-    .description {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: row;
-      .image {
-        width: 30%;
-        height: auto;
-        display: block;
-        float: left;
-        overflow: hidden;
-      }
-      .message {
-        width: 60%;
-        height: auto;
-        display: block;
-        padding: 0.6rem;
-        text-align: left;
-        justify-items: right;
-        box-sizing: border-box;
-        h5 {
-          font-size: 1.1rem;
-          text-transform: uppercase;
-        }
-        h6 {
-          font-size: 1rem;
-          color: #eb7d4b;
-        }
-        .lead1 {
-          font-size: 0.8rem;
-          font-weight: 400;
-          padding: 0;
-        }
-      }
+      width: 100px;
+      height: 100px;
     }
   }
 }
@@ -388,102 +350,52 @@ section {
 #contact-section {
   background-color: #3c5499;
   text-align: center;
-  h4 {
-    font-size: 1.8rem;
-    font-weight: 550;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-  h4::after {
-    content: '';
+  .little-border {
     height: 3px;
     width: 100px;
-    display: block;
     margin: auto;
-    background-color: #3c5499;
-    margin-bottom: 0.5rem;
+    background: #3c5499;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 15px 0 rgba(128, 128, 128, 0.534);
   }
-  .lead {
-    font-size: 0.8rem;
-  }
-  .container {
-    width: 90%;
-    margin: auto;
-    box-sizing: border-box;
-  }
-  input {
-    font-size: 1rem;
-    color: #ffff;
-    padding: 0.5rem 2rem;
-    margin: 2rem 0;
-    width: 100%;
-    height: auto;
-    border: none;
-    border-radius: 5px;
-    background-color: #273766;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      box-shadow: 0 0 10px rgba(39, 55, 102, 0.85);
-    }
-  }
-  textarea {
-    color: #ffff;
-    padding: 0.5rem 2rem;
-    width: 100%;
-    height: auto;
-    border: none;
-    border-radius: 5px;
-    background-color: #273766;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      box-shadow: 0 0 10px rgba(39, 55, 102, 0.85);
-    }
-    resize: none;
-  }
-  .send {
-    color: #ffff;
-    background-color: #30bae7;
-    padding: 0.5rem 2rem;
-    width: 40%;
-    margin: auto;
-    margin-top: 2rem;
-    box-shadow: 0 0 10px #299ec5;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: rebeccapurple;
-      box-shadow: 0 0 10px rebeccapurple;
-    }
-  }
-  input:focus {
-    outline: none;
-  }
-  textarea:focus {
-    outline: none;
-  }
-  input::placeholder {
-    color: white;
-  }
-  textarea::placeholder {
-    color: white;
-  }
-  @media only screen and (max-width: 767px) {
-    .container {
+  form {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    input,
+    textarea {
+      font-size: 1rem;
+      color: #ffff;
+      padding: 0.5rem 2rem;
       width: 100%;
-      box-sizing: border-box;
-      input {
-        margin: 0.2rem 0;
-        width: 100%;
-        height: auto;
+      height: auto;
+      border: none;
+      border-radius: 5px;
+      background-color: #273766;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(39, 55, 102, 0.85);
       }
-      input:last-child() {
-        margin-bottom: 0.3rem;
+      &:focus,
+      &:active {
+        outline: none;
+        box-shadow: none;
       }
-      .send {
-        width: 95%;
-        margin: auto;
+    }
+    .send {
+      color: #ffff;
+      background-color: #30bae7;
+      padding: 0.5rem 2rem;
+      width: 40%;
+      margin: auto;
+      margin-top: 1rem;
+      box-shadow: 0 0 10px #299ec5;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rebeccapurple;
+        box-shadow: 0 0 10px rebeccapurple;
       }
     }
   }
@@ -525,7 +437,7 @@ section {
   }
   .lead a {
     text-decoration: none;
-    color: rgba(128, 0, 128, 0.541);
+    color: rgba(255, 255, 255, 0.541);
     font-family: cursive;
     font-weight: 600;
   }
