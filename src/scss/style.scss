@@ -46,6 +46,10 @@ section {
   max-width: 1280px;
   padding: 0 2rem;
   margin: 0 auto;
+
+  @media (max-width: 575px) {
+    padding: 0 1rem;
+  }
 }
 // Utility Classess
 .btn {
@@ -118,7 +122,12 @@ section {
 // Hero
 #hero {
   min-height: 100vh;
-  background-color: #87509c;
+  background-color: #000000ad;
+  background-image: url(../src/img/hero-bg.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,13 +173,7 @@ section {
 }
 // Skill
 #skill-section {
-  //   background-image: url(../../src/img/img_06.jpg);
-  //   background-size: cover;
-  //   background-position: center top;
-  //   background-repeat: no-repeat;
   background-color: #ffffffa8;
-  //   background-blend-mode: overlay;
-  //   padding: 3rem 0;
   color: #000;
   text-align: center;
   .row {
@@ -243,21 +246,10 @@ section {
 
 //Portfolio
 #portfolio-section {
-  //   background-image: url(../../src/img/img_02.jpg);
-  //   background-position: center top;
-  //   background-attachment: fixed;
-  //   background-blend-mode: overlay;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
   background-color: #ffdd99;
   color: #3c5499;
   text-align: center;
-  h4 {
-    margin: 1rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
+
   .little-border {
     height: 3px;
     width: 100px;
@@ -301,10 +293,6 @@ section {
     background-color: #17c2a4;
     color: #ffffff;
     border: 2px solid #16b99b;
-  }
-  .row {
-    width: 80%;
-    margin: auto;
   }
   @media only screen and(max-width:574px) {
     .portfolio-filter {
